@@ -6,9 +6,12 @@
   <title>Claude Code 源码泄露资源合集 - 150+ 高质量资源</title>
   <meta name="description" content="Claude Code 源码泄露资源合集 - 150+ 高质量资源 curated list">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 1200px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-    .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
-    h1 { text-align: center; color: #333; margin-bottom: 10px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; line-height: 1.6; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+    .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+    h1 { text-align: center; color: #333; margin-bottom: 10px; font-size: 2.5em; }
+    h2 { color: #333; margin: 30px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #667eea; }
+    h3 { color: #555; margin: 20px 0 10px; }
     .badges { text-align: center; margin: 20px 0; }
     .badges img { margin: 5px; }
     .logo { text-align: center; margin: 30px 0; }
@@ -16,11 +19,43 @@
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; background: #f8f9fa; padding: 20px; border-radius: 8px; }
     .stat-item { text-align: center; }
     .stat-value { font-size: 24px; font-weight: bold; color: #667eea; }
-    .stat-label { font-size: 14px; color: #666; }
+    .stat-label { font-size: 14px; color: #666; margin-top: 5px; }
     .disclaimer { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
-    .content { margin-top: 30px; }
-    a { color: #667eea; text-decoration: none; }
+    a { color: #667eea; text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+    .resource-card { background: #f8f9fa; border-radius: 8px; padding: 20px; border-left: 4px solid #667eea; transition: transform 0.2s; }
+    .resource-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(102,126,234,0.2); }
+    .resource-card h4 { color: #333; margin-bottom: 10px; }
+    .resource-card .stars { color: #f1c40f; font-size: 14px; margin: 5px 0; }
+    .resource-card .desc { color: #666; font-size: 14px; margin: 10px 0; }
+    .resource-card .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+    .tag { background: #667eea; color: white; padding: 3px 8px; border-radius: 12px; font-size: 12px; }
+    .tag.hot { background: #e74c3c; }
+    .tag.cn { background: #27ae60; }
+    .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+    .quick-link { display: flex; align-items: center; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; text-decoration: none; transition: transform 0.2s; }
+    .quick-link:hover { transform: scale(1.02); text-decoration: none; }
+    .quick-link .icon { font-size: 24px; margin-right: 15px; }
+    .quick-link .text { flex: 1; }
+    .quick-link .text strong { display: block; font-size: 16px; }
+    .quick-link .text small { opacity: 0.9; font-size: 13px; }
+    .category-section { margin: 30px 0; }
+    .resource-list { list-style: none; }
+    .resource-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+    .resource-list li:last-child { border-bottom: none; }
+    .resource-list a { display: flex; justify-content: space-between; align-items: center; }
+    .resource-list .meta { font-size: 13px; color: #999; }
+    .toc { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .toc ul { list-style: none; }
+    .toc li { margin: 8px 0; }
+    .toc a { color: #667eea; }
+    @media (max-width: 768px) {
+      .container { padding: 20px; }
+      h1 { font-size: 1.8em; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .resource-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -38,7 +73,7 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Claude_AI_logo.svg/1200px-Claude_AI_logo.svg.png" alt="Claude Code">
     </div>
     
-    <p style="text-align: center; font-size: 18px; color: #666;">
+    <p style="text-align: center; font-size: 18px; color: #666; margin: 20px 0;">
       <strong>📦 150+ 高质量资源</strong> | <strong>🔍 深度技术分析</strong> | <strong>🛡️ 安全审计工具</strong> | <strong>📚 学习路径</strong>
     </p>
     
@@ -64,17 +99,396 @@
     <div class="disclaimer">
       <strong>⚠️ 免责声明：</strong>本资源合集仅用于教育和研究目的。所有链接资源版权归原作者所有。请勿用于商业分发或恶意利用。
     </div>
-    
-    <div class="content">
-      <h2>📋 快速访问</h2>
+
+    <!-- 目录 -->
+    <div class="toc">
+      <h3>📑 目录</h3>
       <ul>
-        <li><a href="https://github.com/bugcodes/claude-code-resources">📂 GitHub 仓库</a></li>
-        <li><a href="https://github.com/instructkr/claw-code">🔥 claw-code (64.5k stars)</a></li>
-        <li><a href="https://github.com/nblintao/awesome-claude-code-postleak-insights">📚 Post-Leak Insights</a></li>
+        <li><a href="#quick-links">🚀 快速访问</a></li>
+        <li><a href="#core-resources">🔥 核心资源 Top 15</a></li>
+        <li><a href="#source-mirrors">📦 源码镜像仓库</a></li>
+        <li><a href="#analysis-articles">📝 深度分析文章</a></li>
+        <li><a href="#security-tools">🛡️ 安全审计工具</a></li>
+        <li><a href="#plugins-skills">🔌 插件/技能</a></li>
+        <li><a href="#community">💬 社区讨论</a></li>
+        <li><a href="#timeline">📅 事件时间线</a></li>
       </ul>
-      
-      <p style="text-align: center; margin-top: 40px; color: #999;">
-        完整内容请访问 <a href="https://github.com/bugcodes/claude-code-resources">GitHub 仓库</a>
+    </div>
+
+    <!-- 快速访问链接 -->
+    <h2 id="quick-links">🚀 快速访问</h2>
+    <div class="quick-links">
+      <a href="https://github.com/instructkr/claw-code" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">🔥</span>
+        <div class="text">
+          <strong>claw-code</strong>
+          <small>64.5k stars · 最快 50k 项目</small>
+        </div>
+      </a>
+      <a href="https://github.com/nblintao/awesome-claude-code-postleak-insights" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">📚</span>
+        <div class="text">
+          <strong>Post-Leak Insights</strong>
+          <small>高质量 curated list</small>
+        </div>
+      </a>
+      <a href="https://github.com/hesreallyhim/awesome-claude-code" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">🛠️</span>
+        <div class="text">
+          <strong>Awesome Claude Code</strong>
+          <small>35k stars · 工具大全</small>
+        </div>
+      </a>
+      <a href="https://github.com/catyans/claude-code-source-analysis" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">🔬</span>
+        <div class="text">
+          <strong>源码深度分析</strong>
+          <small>18 个模块解读</small>
+        </div>
+      </a>
+      <a href="https://github.com/trailofbits/claude-code-devcontainer" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">🛡️</span>
+        <div class="text">
+          <strong>安全沙箱</strong>
+          <small>Trail of Bits 出品</small>
+        </div>
+      </a>
+      <a href="https://github.com/openedclaude/claude-reviews-claude" class="quick-link" target="_blank" rel="noopener">
+        <span class="icon">🪞</span>
+        <div class="text">
+          <strong>Claude 自分析</strong>
+          <small>AI 读自己源码</small>
+        </div>
+      </a>
+    </div>
+
+    <!-- 核心资源 Top 15 -->
+    <h2 id="core-resources">🔥 核心资源 Top 15</h2>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <h4>awesome-claude-code-postleak-insights</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 必收藏</div>
+        <div class="desc">高质量分析 curated list，泄露事件最权威资源索引</div>
+        <div class="tags"><span class="tag hot">热门</span><span class="tag"> curated</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/nblintao/awesome-claude-code-postleak-insights" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>claw-code</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 64.5k stars</div>
+        <div class="desc">历史最快 50k star 项目，Rust 重写版本</div>
+        <div class="tags"><span class="tag hot">64.5k</span><span class="tag">Rust</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/instructkr/claw-code" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>awesome-claude-code</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 35k stars</div>
+        <div class="desc">最全面的 Claude Code 工具列表，持续更新</div>
+        <div class="tags"><span class="tag hot">35k</span><span class="tag">工具</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>claude-code-source-analysis</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 深度分析</div>
+        <div class="desc">18 个 Markdown 文件，逐模块架构解读</div>
+        <div class="tags"><span class="tag">分析</span><span class="tag cn">中文</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/catyans/claude-code-source-analysis" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>claude-reviews-claude</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ AI 自分析</div>
+        <div class="desc">Claude 分析自己的源码，元认知研究</div>
+        <div class="tags"><span class="tag">AI</span><span class="tag">自指</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/openedclaude/claude-reviews-claude" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>claude-code-devcontainer</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 安全</div>
+        <div class="desc">Trail of Bits 出品的安全沙箱环境</div>
+        <div class="tags"><span class="tag">安全</span><span class="tag">沙箱</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/trailofbits/claude-code-devcontainer" target="_blank">→ 访问仓库</a></p>
+      </div>
+    </div>
+
+    <!-- 源码镜像仓库 -->
+    <h2 id="source-mirrors">📦 源码镜像仓库</h2>
+    <div class="category-section">
+      <h3>主要镜像</h3>
+      <ul class="resource-list">
+        <li>
+          <a href="https://github.com/instructkr/claw-code" target="_blank">
+            <span>🔥 <strong>claw-code</strong> - 64.5k stars，Rust 重写版</span>
+            <span class="meta">64,516⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank">
+            <span>📜 <strong>system_prompts_leaks</strong> - 多模型系统提示词提取</span>
+            <span class="meta">35,351⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/NanmiCoder/claude-code-haha" target="_blank">
+            <span>💻 <strong>claude-code-haha</strong> - 本地可运行版本</span>
+            <span class="meta">349⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/leaked-claude-code/leaked-claude-code" target="_blank">
+            <span>📦 <strong>leaked-claude-code</strong> - 完整开源镜像</span>
+            <span class="meta">172⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Ahmad-progr/claude-leaked-files" target="_blank">
+            <span>📚 <strong>claude-leaked-files</strong> - 教育用途镜像</span>
+            <span class="meta">137⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Hyper66666/claude-code-sourcemap" target="_blank">
+            <span>🗺️ <strong>claude-code-sourcemap</strong> - sourcemap 镜像</span>
+            <span class="meta">117⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/fazxes/Claude-code" target="_blank">
+            <span>🔨 <strong>Claude-code</strong> - 基于泄露源码重建</span>
+            <span class="meta">110⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/JiaranI/start-claude-code" target="_blank">
+            <span>🚀 <strong>start-claude-code</strong> - 一键启动 v2.1.88</span>
+            <span class="meta">90⭐</span>
+          </a>
+        </li>
+      </ul>
+
+      <h3>中文镜像</h3>
+      <ul class="resource-list">
+        <li>
+          <a href="https://github.com/ThreeFish-AI/analysis_claude_code" target="_blank">
+            <span>🔬 <strong>analysis_claude_code</strong> - 逆向工程研究</span>
+            <span class="meta">270⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/xcanwin/open-claude-code" target="_blank">
+            <span>✅ <strong>open-claude-code</strong> - 首个干净可安装版本</span>
+            <span class="meta">15⭐</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/noya21th/claude-source-leaked" target="_blank">
+            <span>🏷️ <strong>claude-source-leaked</strong> - 87 个 feature flags</span>
+            <span class="meta">43⭐</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 深度分析文章 -->
+    <h2 id="analysis-articles">📝 深度分析文章</h2>
+    <div class="category-section">
+      <h3>架构分析</h3>
+      <ul class="resource-list">
+        <li>
+          <a href="https://dev.to/gabrielanhaia/claude-codes-entire-source-code-was-just-leaked-via-npm-source-maps-heres-whats-inside-cjo" target="_blank">
+            <span>🏗️ <strong>Claude Code's Entire Source Code Was Just Leaked</strong> - 生产架构与技术栈</span>
+            <span class="meta">Dev.to</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://discuss.huggingface.co/t/claude-code-source-leak-production-ai-architecture-patterns-from-512-000-lines/174846" target="_blank">
+            <span>🧠 <strong>Production AI Architecture Patterns</strong> - 上下文压缩与 AutoDream</span>
+            <span class="meta">HuggingFace</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/catyans/claude-code-source-analysis" target="_blank">
+            <span>📖 <strong>Claude Code 泄露源码深度分析</strong> - 逐模块架构解读（18 个文件）</span>
+            <span class="meta">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://kuber.studio/blog/AI/Claude-Code%27s-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm%2C-Let%27s-Talk-About-it" target="_blank">
+            <span>🗺️ <strong>未来路线图与隐藏功能</strong> - BUDDY/KAIROS/ULTRAPLAN</span>
+            <span class="meta">Kuber Studio</span>
+          </a>
+        </li>
+      </ul>
+
+      <h3>隐藏功能</h3>
+      <ul class="resource-list">
+        <li>
+          <a href="https://github.com/noya21th/claude-source-leaked" target="_blank">
+            <span>🏷️ <strong>87 个 Feature Flags</strong> - 未发布功能开关详解</span>
+            <span class="meta">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/FiroYu/Claude-Code-Buddy-Collection" target="_blank">
+            <span>🐾 <strong>Claude-Code-Buddy-Collection</strong> - 18 种宠物物种图鉴</span>
+            <span class="meta">GitHub</span>
+          </a>
+        </li>
+      </ul>
+
+      <h3>子系统深度</h3>
+      <ul class="resource-list">
+        <li>
+          <a href="https://medium.com/@nblintao/how-an-ai-reads-the-web-a-deep-dive-into-claude-codes-webfetchtool-0abee4446343" target="_blank">
+            <span>🌐 <strong>How an AI Reads the Web</strong> - WebFetchTool 设计（1,173 行）</span>
+            <span class="meta">Medium</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 安全审计工具 -->
+    <h2 id="security-tools">🛡️ 安全审计工具</h2>
+    <div class="resource-grid">
+      <div class="resource-card">
+        <h4>trailofbits/skills</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 4,170 stars</div>
+        <div class="desc">Trail of Bits 安全研究技能，代码审计与漏洞检测</div>
+        <div class="tags"><span class="tag">安全</span><span class="tag">审计</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/trailofbits/skills" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>TheAuditorTool/Auditor</h4>
+        <div class="stars">⭐⭐⭐⭐⭐ 541 stars</div>
+        <div class="desc">VibeCoding 解毒剂，自动化安全审计</div>
+        <div class="tags"><span class="tag">审计</span><span class="tag">自动化</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/TheAuditorTool/Auditor" target="_blank">→ 访问仓库</a></p>
+      </div>
+      <div class="resource-card">
+        <h4>peg/rampart</h4>
+        <div class="stars">⭐⭐⭐⭐ 59 stars</div>
+        <div class="desc">AI Agent 防火墙，策略引擎控制 AI 行为</div>
+        <div class="tags"><span class="tag">防火墙</span><span class="tag">策略</span></div>
+        <p style="margin-top:10px"><a href="https://github.com/peg/rampart" target="_blank">→ 访问仓库</a></p>
+      </div>
+    </div>
+
+    <!-- 插件/技能 -->
+    <h2 id="plugins-skills">🔌 插件/技能</h2>
+    <ul class="resource-list">
+      <li>
+        <a href="https://github.com/qdhenry/Claude-Command-Suite" target="_blank">
+          <span>🎯 <strong>Claude-Command-Suite</strong> - 专业命令套件（1,104⭐）</span>
+          <span class="meta">1,104⭐</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/zubair-trabzada/geo-seo-claude" target="_blank">
+          <span>🌍 <strong>geo-seo-claude</strong> - GEO 优先 SEO 技能（4,621⭐）</span>
+          <span class="meta">4,621⭐</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/tradermonty/claude-trading-skills" target="_blank">
+          <span>📈 <strong>claude-trading-skills</strong> - 交易分析技能（478⭐）</span>
+          <span class="meta">478⭐</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/xjtulyc/MedgeClaw" target="_blank">
+          <span>🧬 <strong>MedgeClaw</strong> - 生物医学 AI 研究助手（935⭐）</span>
+          <span class="meta">935⭐</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/chiphuyen/sniffly" target="_blank">
+          <span>📊 <strong>sniffly</strong> - 使用统计仪表板（1,193⭐）</span>
+          <span class="meta">1,193⭐</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 社区讨论 -->
+    <h2 id="community">💬 社区讨论</h2>
+    <ul class="resource-list">
+      <li>
+        <a href="https://news.ycombinator.com/item?id=47584540" target="_blank">
+          <span>🔥 <strong>Hacker News 讨论</strong> - 正则情感检测、反蒸馏防御</span>
+          <span class="meta">HN</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.reddit.com/r/LocalLLaMA/comments/1s8ijfb/claude_code_source_code_has_been_leaked_via_a_map/" target="_blank">
+          <span>📢 <strong>r/LocalLLaMA</strong> - 隐藏功能详解（KAIROS/Buddy/Undercover）</span>
+          <span class="meta">Reddit</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.reddit.com/r/ClaudeAI/comments/1s8ifm6/claude_code_source_code_has_been_leaked_via_a_map/" target="_blank">
+          <span>🤖 <strong>r/ClaudeAI</strong> - CCH attestation 机制分析</span>
+          <span class="meta">Reddit</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/Fried_rice/status/2038894956459290963" target="_blank">
+          <span>🐦 <strong>发现者推文</strong> - Chaofan Shou (@Fried_rice)</span>
+          <span class="meta">X</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/simonwongio/status/2039003134484488484" target="_blank">
+          <span>🔗 <strong>源码分析汇总</strong> - Simon Wong（含 3 个源码链接）</span>
+          <span class="meta">X</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 事件时间线 -->
+    <h2 id="timeline">📅 事件时间线</h2>
+    <ul class="resource-list">
+      <li>
+        <span>📌 <strong>2025-02</strong> - 首次泄露（早期版本，影响较小）</span>
+      </li>
+      <li>
+        <span>🔍 <strong>2026-03-31 09:00 UTC</strong> - Chaofan Shou 发现 npm sourcemap 泄露</span>
+      </li>
+      <li>
+        <span>🐦 <strong>2026-03-31 10:30 UTC</strong> - 第一条推文发布</span>
+      </li>
+      <li>
+        <span>📦 <strong>2026-03-31 12:00 UTC</strong> - GitHub 镜像仓库创建</span>
+      </li>
+      <li>
+        <span>🔥 <strong>2026-03-31 14:00 UTC</strong> - claw-code 仓库创建</span>
+      </li>
+      <li>
+        <span>⭐ <strong>2026-03-31 16:00 UTC</strong> - 突破 10k stars</span>
+      </li>
+      <li>
+        <span>🚀 <strong>2026-03-31 18:00 UTC</strong> - 突破 30k stars</span>
+      </li>
+      <li>
+        <span>🏆 <strong>2026-03-31 20:00 UTC</strong> - 突破 50k stars（历史最快）</span>
+      </li>
+      <li>
+        <span>📈 <strong>2026-03-31 23:59 UTC</strong> - 超过 60k stars</span>
+      </li>
+      <li>
+        <span>📝 <strong>2026-04-01 00:00 UTC</strong> - 社区分析文章开始涌现</span>
+      </li>
+      <li>
+        <span>🛡️ <strong>2026-04-01 08:00 UTC</strong> - Trail of Bits 发布安全沙箱</span>
+      </li>
+      <li>
+        <span>✅ <strong>2026-04-01</strong> - 本资源合集创建</span>
+      </li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #eee; color: #999;">
+      <p><strong>最后更新：</strong>2026-04-01 · <strong>资源总数：</strong>150+</p>
+      <p>📄 完整 README 请访问 <a href="https://github.com/bugcodes/claude-code-resources" target="_blank">GitHub 仓库</a></p>
+      <p style="margin-top: 15px;">
+        <a href="https://github.com/bugcodes/claude-code-resources/stargazers">⭐ Star This Repo</a> · 
+        <a href="https://github.com/bugcodes/claude-code-resources/issues">🐛 Report Issue</a> · 
+        <a href="https://github.com/bugcodes/claude-code-resources/discussions">💬 Discuss</a>
       </p>
     </div>
   </div>
