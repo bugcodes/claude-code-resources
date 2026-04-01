@@ -1,3 +1,9 @@
-# 禁用 Jekyll 处理，直接渲染 HTML
+# GitHub Pages 配置
+title: Claude Code 源码泄露资源合集
+description: 150+ 高质量资源 curated list
+theme: null
+markdown: kramdown
+
+# 禁用 Jekyll 处理
 include: []
 exclude: []
