@@ -2,12 +2,16 @@
 
 # 🔓 Claude Code 源码泄露资源合集
 
-![GitHub stars](https://img.shields.io/github/stars/bugcodes/claude-code-resources?style=for-the-badge&logo=github)
-![GitHub forks](https://img.shields.io/github/forks/bugcodes/claude-code-resources?style=for-the-badge&logo=github)
-![GitHub last commit](https://img.shields.io/github/last-commit/bugcodes/claude-code-resources?style=for-the-badge&logo=git)
-![License](https://img.shields.io/github/license/bugcodes/claude-code-resources?style=for-the-badge)
+<a href="https://github.com/bugcodes/claude-code-resources/stargazers"><img src="https://img.shields.io/github/stars/bugcodes/claude-code-resources?style=for-the-badge&logo=github" alt="Stars" /></a>
+<a href="https://github.com/bugcodes/claude-code-resources/network/members"><img src="https://img.shields.io/github/forks/bugcodes/claude-code-resources?style=for-the-badge&logo=github" alt="Forks" /></a>
+<a href="https://github.com/bugcodes/claude-code-resources/commits/main"><img src="https://img.shields.io/github/last-commit/bugcodes/claude-code-resources?style=for-the-badge&logo=git" alt="Last Commit" /></a>
+<a href="https://github.com/bugcodes/claude-code-resources/blob/main/LICENSE"><img src="https://img.shields.io/github/license/bugcodes/claude-code-resources?style=for-the-badge" alt="License" /></a>
 
-![Claude Code](https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Claude_AI_logo.svg/1200px-Claude_AI_logo.svg.png)
+<br/>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Claude_AI_logo.svg/1200px-Claude_AI_logo.svg.png" alt="Claude Code" width="400" style="max-width: 100%; height: auto;" />
+
+<br/>
 
 **📦 150+ 高质量资源 | 🔍 深度技术分析 | 🛡️ 安全审计工具 | 📚 学习路径**
 
